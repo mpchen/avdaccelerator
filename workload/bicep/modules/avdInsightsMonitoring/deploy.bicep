@@ -103,7 +103,7 @@ module deployDiagnosticsAzurePolicyForAvd './.bicep/azureMonitoringPolicies.bice
 }
 
 // Performance counters
-module deployMonitoringEventsPerformanceSettings './.bicep/monitoringEventsPerformanceCounters.bicep' = if (deployAlaWorkspace) {
+module deployMonitoringEventsPerformanceSettings './.bicep/monitoringEventsPerformanceCounters.bicep' = {
   name: 'Events-Performance-${time}'
   params: {
       deployAlaWorkspace: deployAlaWorkspace
